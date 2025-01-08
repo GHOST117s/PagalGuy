@@ -1,33 +1,117 @@
-.welcome-container {
-  width: 100%;
-  min-height: 400px;
-  background: linear-gradient(to bottom, #98FFB6 0%, #5DC288 100%);
-  padding: 40px 20px;
-  text-align: center;
-
-  .bottom_text {
+.header {
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #fff;
+    
+    .secondary-nav {
+      ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        
+        a {
+          color: #999;
+          text-decoration: none;
+          font-size: 14px;
+          
+          &:hover {
+            color: #666;
+          }
+        }
+      }
+    }
+    
+    .auth-buttons {
+      display: flex;
+      gap: 10px;
+      
+      a {
+        padding: 8px 24px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 500;
+        
+        &.login-btn {
+          background: #50B288;
+          color: #fff;
+        }
+        
+        &.register-btn {
+          border: 2px solid #50B288;
+          color: #50B288;
+        }
+      }
+    }
   }
+  
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    
+    .logo {
+      img {
+        height: 40px;
+      }
+    }
+    
+    .main-nav {
+      ul {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+        
+        a {
+          color: #333;
+          text-decoration: none;
+          font-weight: 500;
+          
+          &.has-dropdown::after {
+            content: '▼';
+            font-size: 10px;
+            margin-left: 5px;
+          }
+          
+          &:hover {
+            color: #50B288;
+          }
+        }
+      }
+    }
+  }
+}
 
+.welcome-section {
+  background: linear-gradient(to bottom, #98FFB6 0%, #50B288 100%);
+  padding: 60px 20px;
+  text-align: center;
+  min-height: 400px;
+  
   .welcome-content {
     max-width: 800px;
     margin: 0 auto;
-
+    
     h1 {
       font-size: 48px;
       color: #fff;
       margin-bottom: 10px;
       font-weight: bold;
     }
-
+    
     h2 {
       font-size: 24px;
       color: #fff;
       margin-bottom: 30px;
     }
-
+    
     .description,
     .community-text {
-      color: black;
+      color: #fff;
       margin-bottom: 20px;
       font-size: 16px;
       line-height: 1.5;
@@ -35,14 +119,7 @@
       margin-left: auto;
       margin-right: auto;
     }
-
-    .text-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
+    
     .signup-btn {
       background-color: #333;
       color: #fff;
@@ -53,19 +130,20 @@
       cursor: pointer;
       margin: 20px 0;
       transition: background-color 0.3s ease;
-
+      
       &:hover {
         background-color: #444;
       }
     }
-
+    
     .stats {
       margin-top: 40px;
-
+      
       h3 {
         color: #fff;
         font-size: 28px;
-
+        font-weight: normal;
+        
         .highlight {
           font-weight: bold;
         }
