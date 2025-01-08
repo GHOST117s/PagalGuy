@@ -1,5 +1,5 @@
 {
-  "name": "PagalGuy",
+  "name": "Default",
   "component": false,
   "license_url": null,
   "about_url": null,
@@ -7,23 +7,8 @@
   "theme_version": null,
   "minimum_discourse_version": null,
   "maximum_discourse_version": null,
-  "assets": {
-
-  },
-  "color_schemes": {
-    "air-light": {
-      "primary": "1c1c1c",
-      "secondary": "f9fcff",
-      "tertiary": "98FFB6",
-      "quaternary": "7e8b93",
-      "header_background": "f9fcff",
-      "header_primary": "122b43",
-      "highlight": "e6cb37",
-      "danger": "d05454",
-      "success": "71bd9f",
-      "love": "c16ad7"
-    }
-  },
+  "assets": {},
+  "color_schemes": {},
   "modifiers": {},
   "learn_more": "https://meta.discourse.org/t/beginners-guide-to-using-discourse-themes/91966"
 }
