@@ -23,27 +23,27 @@
       }
     }
     
-    .auth-buttons {
-      display: flex;
-      gap: 10px;
+    // .auth-buttons {
+    //   display: flex;
+    //   gap: 10px;
       
-      a {
-        padding: 8px 24px;
-        border-radius: 4px;
-        text-decoration: none;
-        font-weight: 500;
+    //   a {
+    //     padding: 8px 24px;
+    //     border-radius: 4px;
+    //     text-decoration: none;
+    //     font-weight: 500;
         
-        &.login-btn {
-          background: #50B288;
-          color: #fff;
-        }
+    //     &.login-btn {
+    //       background: #50B288;
+    //       color: #fff;
+    //     }
         
-        &.register-btn {
-          border: 2px solid #50B288;
-          color: #50B288;
-        }
-      }
-    }
+    //     &.register-btn {
+    //       border: 2px solid #50B288;
+    //       color: #50B288;
+    //     }
+    //   }
+    // }
   }
   
   .main-header {
