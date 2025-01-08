@@ -17,13 +17,4 @@
     </div>
   </div>
   
-  <script type="text/discourse-plugin" version="0.8">
-    api.onPageChange(() => {
-      const signupButton = document.getElementById('signup-btn');
-      if (signupButton) {
-        signupButton.addEventListener('click', () => {
-          Discourse.User.current().showSignup();
-        });
-      }
-    });
-  </script>
+  <script src="/common/signup.js" type="text/discourse-plugin" version="0.8"></script>
