@@ -1,67 +1,75 @@
 .welcome-container {
-    width: 100%;
-    min-height: 400px;
-    background: linear-gradient(to bottom, #98FFB6 0%, #5DC288 100%);
-    padding: 40px 20px;
-    text-align: center;
-  .bottom_text{
+  width: 100%;
+  min-height: 400px;
+  background: linear-gradient(to bottom, #98FFB6 0%, #5DC288 100%);
+  padding: 40px 20px;
+  text-align: center;
+
+  .bottom_text {
   }
-    
-    .welcome-content {
-      max-width: 800px;
-      margin: 0 auto;
-      
-      h1 {
-        font-size: 48px;
+
+  .welcome-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 48px;
+      color: #fff;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+
+    .description,
+    .community-text {
+      color: black;
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 1.5;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .text-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .signup-btn {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 12px 32px;
+      font-size: 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 20px 0;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #444;
+      }
+    }
+
+    .stats {
+      margin-top: 40px;
+
+      h3 {
         color: #fff;
-        margin-bottom: 10px;
-        font-weight: bold;
-      }
-      
-      h2 {
-        font-size: 24px;
-        color: #fff;
-        margin-bottom: 30px;
-      }
-      
-      .description,
-      .community-text {
-        color: black;
-        margin-bottom: 20px;
-        font-size: 16px;
-        line-height: 1.5;
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      
-      .signup-btn {
-        background-color: #333;
-        color: #fff;
-        border: none;
-        padding: 12px 32px;
-        font-size: 18px;
-        border-radius: 4px;
-        cursor: pointer;
-        margin: 20px 0;
-        transition: background-color 0.3s ease;
-        
-        &:hover {
-          background-color: #444;
-        }
-      }
-      
-      .stats {
-        margin-top: 40px;
-        
-        h3 {
-          color: #fff;
-          font-size: 28px;
-          
-          .highlight {
-            font-weight: bold;
-          }
+        font-size: 28px;
+
+        .highlight {
+          font-weight: bold;
         }
       }
     }
   }
+}
