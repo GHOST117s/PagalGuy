@@ -157,7 +157,15 @@
   top: -718px;
 }
 .auth-buttons {
+  padding: 8px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
   .sign-up-button {
+    background: #50b288;
+    color: #fff;
+  }
+  .login-button {
     background: #50b288;
     color: #fff;
   }
