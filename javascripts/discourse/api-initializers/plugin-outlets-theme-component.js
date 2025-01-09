@@ -8,6 +8,8 @@ export default apiInitializer('0.11.1', (api) => {
   }
   // if user is loged in only then show this before-header-panel
   if (currentUser) {
+    console.log("currentUser", currentUser);
+    
     api.addPostMenuButton("plugin-outlets-post-menu-button", "plugin-outlets-post-menu-button");
   }
 });
