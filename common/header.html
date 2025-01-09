@@ -43,19 +43,28 @@
       <p class="community-text">
         With an account you can also be notified of new replies, save bookmarks, and use likes to thank others. We can all work together to make this community great
       </p>
-      <a href="#" id="signup-link">
-        <button class="signup-btn">Sign Up</button>
-      </a>
+      <button id="signup-btn" class="signup-btn">Sign Up</button>
+
       
       <div class="stats">
         <h3>Across <span class="highlight">22,000</span> groups & institutions</h3>
       </div>
     </div>
   </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const signupLink = document.getElementById('signup-link');
-      signupLink.href = window.location.origin + '/signup';
+  <script type="text/discourse-plugin" version="0.8">
+    api.onPageChange(() => {
+      const signupButton = document.getElementById('signup-btn');
+      if (signupButton) {
+        signupButton.addEventListener('click', () => {
+          if (Discourse.User.current()) {
+            // User is logged in, navigate to the current URL with /signup
+            window.location.href = window.location.origin + '/signup';
+          } else {
+            // User is not logged in, show the signup modal
+            Discourse.User.current().showSignup();
+          }
+        });
+      }
     });
   </script>
 
