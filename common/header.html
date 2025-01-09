@@ -44,12 +44,18 @@
         With an account you can also be notified of new replies, save bookmarks, and use likes to thank others. We can all work together to make this community great
       </p>
       
-      <button class="signup-btn">Sign Up</button>
+      <a href="#" id="signup-link" class="btn btn-primary btn-small sign-up-button">Sign Up</a>
       
       <div class="stats">
         <h3>Across <span class="highlight">22,000</span> groups & institutions</h3>
       </div>
     </div>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const signupLink = document.getElementById('signup-link');
+      signupLink.href = window.location.origin + '/signup';
+    });
+  </script>
 
   
