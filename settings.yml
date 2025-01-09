@@ -1,0 +1,23 @@
+text_color:
+  default: "#fff"
+  description: "Text color"
+background_color:
+  default: "#0c0"
+  description: "Background color"
+border_color:
+  default: "#080"
+  description: "Border color"
+wrapper_background_color:
+  default: "#88f"
+  description: "Wrapper background color"
+wrapper_border_color:
+  default: "#00c"
+  description: "Wrapper border color"
+admin_only:
+  default: false
+  type: bool
+  description: "Show toggle in header for admin only"
+svg_icons:
+  default: 'fab-github|chevron-circle-down|chevron-circle-up'
+  type: 'list'
+  list_type: 'compact'
