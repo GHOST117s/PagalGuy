@@ -187,6 +187,8 @@ body.plugin-outlets-visible .plugin-outlet-connector-component {
   //   top: -718px;
   // }
   .auth-buttons {
+    position: absolute;
+    top: -718px;
     padding: 8px 24px;
     border-radius: 4px;
     text-decoration: none;
