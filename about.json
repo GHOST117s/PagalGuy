@@ -1,7 +1,7 @@
 {
   "name": "Default",
-  "component": false,
-  "license_url": null,
+  "license_url": "MIT",
+  "components": ["desktop", "mobile"],
   "about_url": null,
   "authors": null,
   "theme_version": null,
