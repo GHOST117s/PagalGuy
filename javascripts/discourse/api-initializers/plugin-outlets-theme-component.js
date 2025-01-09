@@ -7,8 +7,12 @@ export default apiInitializer('0.11.1', (api) => {
     api.headerIcons.add("plugin-outlets-header-icon", PluginOutletsHeaderIcon);
   }
   // if user is loged in only then show this before-header-panel
-  if (currentUser) {
-    console.log("currentUser", currentUser);
-    
-  }
+  api.onPageChange(() => {
+    const signupButton = document.getElementById('signup-btn');
+    if (signupButton) {
+      signupButton.addEventListener('click', () => {
+        Discourse.User.current().showSignup();
+      });
+    }
+  });
 });
