@@ -52,8 +52,9 @@
     </div>
   </div>
   <script>
-    document.querySelector('.signup-btn').addEventListener('click', function() {
-      window.location.href = '';
+    document.addEventListener('DOMContentLoaded', function() {
+      const signupLink = document.getElementById('signup-link');
+      signupLink.href = window.location.origin + '/signup';
     });
   </script>
 
