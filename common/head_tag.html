@@ -616,14 +616,10 @@
     /&gt;</PluginOutletConnectorComponent>
 </script>
 <script type="text/x-handlebars" data-template-name="/connectors/before-header-panel/plugin-outlet-component">
-  {{#if currentUser}}
-    <PluginOutletConnectorComponent @name="before-header-panel">
-      <PluginOutlet
-        @name="before-header-panel"
-        @outletArgs={{hash topic=this.header.topic}}
-      />
-    </PluginOutletConnectorComponent>
-  {{/if}}
+  <PluginOutletConnectorComponent @name="before-header-panel">&lt;PluginOutlet
+          @name="before-header-panel"
+          @outletArgs=\{{hash topic=this.header.topic}}
+        /&gt;</PluginOutletConnectorComponent>
 </script>
 <script type="text/x-handlebars" data-template-name="/connectors/home-logo__before/plugin-outlet-component">
   <PluginOutletConnectorComponent @type="wrapper-before" @name="home-logo">&lt;PluginOutlet @name="home-logo" @outletArgs=\{{hash minimized=@minimized}}&gt;</PluginOutletConnectorComponent>

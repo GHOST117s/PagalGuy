@@ -6,4 +6,8 @@ export default apiInitializer('0.11.1', (api) => {
   if ((!settings.admin_only) || currentUser.admin) {
     api.headerIcons.add("plugin-outlets-header-icon", PluginOutletsHeaderIcon);
   }
+  // if user is loged in only then show this before-header-panel
+  if (currentUser) {
+    api.addPostMenuButton("plugin-outlets-post-menu-button", "plugin-outlets-post-menu-button");
+  }
 });
