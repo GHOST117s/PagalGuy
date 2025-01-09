@@ -1,80 +1,68 @@
+
 <header class="header">
-  <div class="top-bar">
-    <nav class="secondary-nav">
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Advertise</a></li>
-        <li><a href="#">Career</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-      </ul>
-    </nav>
-    <div class="auth-buttons">
-      <!-- Authentication Buttons -->
-      <!-- Uncomment these if you want login/register options -->
-      <!-- <a href="#" class="login-btn">Login</a> -->
-      <!-- <a href="#" class="register-btn">Register</a> -->
+    <div class="top-bar">
+      <nav class="secondary-nav">
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Advertise</a></li>
+          <li><a href="#">Career</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <!-- <a href="#" class="login-btn">Login</a>
+        <a href="#" class="register-btn">Register</a> -->
+      </div>
     </div>
-    <div class="user-info">
-      <span>Your Top Badges:</span>
-      <button class="badge-btn">Basic</button>
-      <div class="user-icon">
-        <a href="#"><img src="https://via.placeholder.com/30" alt="User Icon" /></a>
+  
+    <div class="main-header">
+      <a href="#" class="logo">
+      <img src="https://i.ibb.co/dtHhDQt/cropped-Untitled-1-1.webp" alt="cropped-Untitled-1-1" border="0">
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#" class="has-dropdown">MBA</a></li>
+          <li><a href="#">Bank PO Exam</a></li>
+          <li><a href="#">Engineering</a></li>
+          <li><a href="#">SSC</a></li>
+          <li><a href="#">UPSC</a></li>
+          <li><a href="#" class="has-dropdown">Others</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <div class="welcome-section">
+    <div class="welcome-content">
+      <h1>Welcome</h1>
+      <h2>We're glad you're here!</h2>
+      
+      <p class="description">
+        Tired of scrolling through the same posts? When you create an account you'll always come back to where you left off.
+      </p>
+      <p class="community-text">
+        With an account you can also be notified of new replies, save bookmarks, and use likes to thank others. We can all work together to make this community great
+      </p>
+      <a href="#" id="signup-link" style="display: none;">
+        <button class="signup-btn">Sign Up</button>
+      </a>
+      
+      <div class="stats">
+        <h3>Across <span class="highlight">22,000</span> groups & institutions</h3>
       </div>
     </div>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const signupLink = document.getElementById('signup-link');
+      const currentUser = Discourse.User.current();
+      
+      if (!currentUser) {
+        signupLink.href = window.location.origin + '/signup';
+        signupLink.style.display = 'inline-block';
+      }
+      
+    });
+  </script>
 
-  <div class="main-header">
-    <a href="#" class="logo">
-      <img src="https://i.ibb.co/dtHhDQt/cropped-Untitled-1-1.webp" alt="cropped-Untitled-1-1" border="0" />
-    </a>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#" class="has-dropdown">MBA</a></li>
-        <li><a href="#">Bank PO Exam</a></li>
-        <li><a href="#">Engineering</a></li>
-        <li><a href="#">SSC</a></li>
-        <li><a href="#">UPSC</a></li>
-        <li><a href="#" class="has-dropdown">Others</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<div class="welcome-section">
-  <div class="welcome-content">
-    <h1>Welcome</h1>
-    <h2>We're glad you're here!</h2>
-    <p class="description">
-      Tired of scrolling through the same posts? When you create an account, you'll always come back to where you left off.
-    </p>
-    <p class="community-text">
-      With an account, you can also be notified of new replies, save bookmarks, and use likes to thank others. We can all work together to make this community great!
-    </p>
-    <a href="#" id="signup-link" style="display: none;">
-      <button class="signup-btn">Sign Up</button>
-    </a>
-    <div class="stats">
-      <h3>Across <span class="highlight">22,000</span> groups & institutions</h3>
-    </div>
-  </div>
-</div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const signupLink = document.getElementById('signup-link');
-    const currentUser = Discourse.User.current();
-
-    // Show signup link if no user is logged in
-    if (!currentUser) {
-      signupLink.href = window.location.origin + '/signup';
-      signupLink.style.display = 'inline-block';
-    }
-
-    // Example of dynamically adding the badge
-    const badgeButton = document.querySelector('.badge-btn');
-    if (currentUser) {
-      badgeButton.textContent = currentUser.topBadge || 'Basic';
-    }
-  });
-</script>
+  
