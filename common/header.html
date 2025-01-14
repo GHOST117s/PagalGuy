@@ -12,8 +12,8 @@
       </nav>
       <div class="auth-buttons">
         
-         <a href="#" class="login-btn">Login</a> 
-        <a href="#" class="register-btn">Register</a>
+        <!-- <a href="#" class="login-btn">Login</a>
+        <a href="#" class="register-btn">Register</a> -->
       </div>
     </div>
   
@@ -35,8 +35,8 @@
   
   <div class="welcome-section">
     <div class="welcome-content">
-      <!-- <h1>Welcome</h1>
-      <h2>We're glad you're here!</h2> -->
+      <h1>Welcome</h1>
+      <h2>We're glad you're here!</h2>
       
       <p class="description">
         Tired of scrolling through the same posts? When you create an account you'll always come back to where you left off.
@@ -44,11 +44,9 @@
       <p class="community-text">
         With an account you can also be notified of new replies, save bookmarks, and use likes to thank others. We can all work together to make this community great
       </p>
-      <!-- <a href="#" id="signup-link" style="display: none;"> -->
-        <!-- <button class="signup-btn">Sign Up</button> -->
-        <div id="signup-button-container"></div>
-
-      <!-- </a> -->
+      <a href="#" id="signup-link" style="display: none;">
+        <button class="signup-btn">Sign Up</button>
+      </a>
       
       <div class="stats">
         <h3>Across <span class="highlight">22,000</span> groups & institutions</h3>
@@ -57,18 +55,14 @@
   </div>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const signupButtonContainer = document.getElementById('signup-button-container');
+      const signupLink = document.getElementById('signup-link');
       const currentUser = Discourse.User.current();
       
       if (!currentUser) {
-        const signupButton = document.createElement('button');
-        signupButton.className = 'btn-primary sign-up-button';
-        signupButton.innerText = 'Sign Up';
-        signupButton.addEventListener('click', function() {
-          Discourse.__container__.lookup('controller:application').send('showCreateAccount');
-        });
-        signupButtonContainer.appendChild(signupButton);
+        signupLink.href = window.location.origin + '/signup';
+        signupLink.style.display = 'inline-block';
       }
+      
     });
   </script>
 
