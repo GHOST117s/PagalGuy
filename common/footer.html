@@ -30,6 +30,12 @@ footer {
     flex: 1;
     min-width: 250px;
     margin-bottom: 30px;
+    
+    /* Make all text white */
+    a, p, li, span {
+      color: #ffffff;
+      text-decoration: none;
+    }
   }
   
   .footer-section h3 {
@@ -55,6 +61,27 @@ footer {
     color: #fff;
     line-height: 1.8;
     margin-bottom: 15px;
+  }
+
+  /* Specific styling for contact section */
+.footer-section.contact-us {
+    margin-left: 20px;  /* Adjust this value to move left/right */
+    padding-left: 15px;
+    
+    a {
+      color: #ffffff;
+      &:hover {
+        color: #50b288;
+      }
+    }
+    
+    .contact-info {
+      margin-top: 20px;
+      
+      p, a {
+        color: #ffffff;
+      }
+    }
   }
   
   .contact-info {
