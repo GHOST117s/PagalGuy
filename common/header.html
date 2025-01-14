@@ -44,14 +44,8 @@
       <p class="community-text">
         With an account you can also be notified of new replies, save bookmarks, and use likes to thank others. We can all work together to make this community great
       </p>
-      {{#unless currentUser}}
-      {{d-button
-        action=(route-action "showCreateAccount")
-        class="btn-primary sign-up-button"
-        translatedLabel=(theme-setting "signup_text")
-      }}
-    {{/unless}}
-      
+      <div id="signup-button-container"></div>
+
       
       <div class="stats">
         <h3>Across <span class="highlight">22,000</span> groups & institutions</h3>
@@ -60,14 +54,18 @@
   </div>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const signupLink = document.getElementById('signup-link');
+      const signupButtonContainer = document.getElementById('signup-button-container');
       const currentUser = Discourse.User.current();
       
       if (!currentUser) {
-        signupLink.href = window.location.origin + '/signup';
-        signupLink.style.display = 'inline-block';
+        const signupButton = document.createElement('button');
+        signupButton.className = 'btn-primary sign-up-button';
+        signupButton.innerText = 'Sign Up';
+        signupButton.addEventListener('click', function() {
+          Discourse.__container__.lookup('controller:application').send('showCreateAccount');
+        });
+        signupButtonContainer.appendChild(signupButton);
       }
-      
     });
   </script>
 
