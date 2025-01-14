@@ -59,8 +59,10 @@
       const currentUser = Discourse.User.current();
       
       if (!currentUser) {
-        signupLink.href = window.location.origin + '/signup';
-        signupLink.style.display = 'inline-block';
+        signupLink.addEventListener('click', function() {
+          Discourse.__container__.lookup('controller:application').send('showCreateAccount');
+        });
+      
       }
       
     });
