@@ -215,6 +215,8 @@ body.plugin-outlets-visible .plugin-outlet-connector-component {
   
   // .plugin-outlet-connector-component {
 // custom search banner customizations
+
+
 .custom-search-banner-wrap {
   margin: 0 auto !important;
   max-width: unset;
@@ -269,4 +271,8 @@ body.plugin-outlets-visible .plugin-outlet-connector-component {
   #main-outlet {
     padding-top: 2em;
   }
+}
+.search-dropdown{
+  border:1px solid red;
+  display:none;
 }
