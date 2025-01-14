@@ -44,24 +44,30 @@
       <p class="community-text">
         With an account you can also be notified of new replies, save bookmarks, and use likes to thank others. We can all work together to make this community great
       </p>
-      <div id="signup-button-container"></div>
-
+      <a href="#" id="signup-link" style="display: none;">
+        <button class="signup-btn">Sign Up</button>
+      </a>
+      
       <div class="stats">
         <h3>Across <span class="highlight">22,000</span> groups & institutions</h3>
       </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const signupButtonContainer = document.getElementById('signup-button-container');
+      const currentUser = Discourse.User.current();
       
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          const signupButtonContainer = document.getElementById('signup-button-container');
-          const currentUser = Discourse.User.current();
-          
-          if (!currentUser) {
-            const signupButton = document.createElement('a');
-            signupButton.href = window.location.origin + '/signup';
-            signupButton.className = 'btn btn-primary btn-small sign-up-button';
-            signupButton.innerText = 'Sign Up';
-            signupButtonContainer.appendChild(signupButton);
-          }
+      if (!currentUser) {
+        const signupButton = document.createElement('button');
+        signupButton.className = 'btn-primary sign-up-button';
+        signupButton.innerText = 'Sign Up';
+        signupButton.addEventListener('click', function() {
+          Discourse.__container__.lookup('controller:application').send('showCreateAccount');
         });
-      </script>
+        signupButtonContainer.appendChild(signupButton);
+      }
+    });
+  </script>
+
   
